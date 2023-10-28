@@ -24,7 +24,6 @@ The following **additional** features are implemented:
 
 https://imgur.com/a/ag99t6O
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="E0qmUlg"><a href="https://imgur.com/E0qmUlg">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
 
