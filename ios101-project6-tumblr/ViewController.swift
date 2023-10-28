@@ -6,6 +6,7 @@
 import UIKit
 import Nuke
 
+
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -77,5 +78,22 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
         }
         session.resume()
+    }
+
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            // Get the index path for the selected row.
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Get the selected post from your data source (e.g., an array of posts)
+                let selectedPost = posts[selectedIndexPath.row] // Replace 'posts' with your data source
+                
+                // Access the Detail View Controller (via the segue's destination).
+                if let detailViewController = segue.destination as? DetailViewController {
+                    // Set the post property on the Detail View Controller to the selected post
+                    detailViewController.post = selectedPost
+                }
+            }
+        }
     }
 }

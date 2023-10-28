@@ -32,3 +32,13 @@ struct Photo: Decodable {
 struct PhotoInfo: Decodable {
     let url: URL
 }
+
+
+
+
+// Add imageUrl property to Post
+extension Post {
+    var imageUrl: URL? {
+        return photos.first?.originalSize.url
+    }
+}
